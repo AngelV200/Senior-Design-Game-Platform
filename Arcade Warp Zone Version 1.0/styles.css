@@ -1,0 +1,356 @@
+
+/* Styles for the body of the webpage */
+body {
+    /* Sets the font to Poppins or sans-serif if Poppins not available */
+    font-family: Poppins, sans-serif;
+    /* Sets the padding inside body element to zero */
+    padding: 0;
+    /* Sets the margins around body element to zero */
+    margin: 0;
+    /* Sets background color of body element to CSUN red */
+    background-color: #D22030;
+}
+
+/* Styles for the navigation bar */
+ul.navbar {
+    /* Gets rid of bullet points on list items */
+    list-style-type: none;
+    /* Sets the padding inside the navbar to zero */
+    padding: 0;
+    /* Sets the margins around navbar to zero */
+    margin: 0;
+    /* Sets background color of body element to grey */
+    background-color: #55565A;
+    /* Sets border color of body element to black */
+    border: solid #000000 5px;
+    /* Cuts the element so that the content fits inside the parent element */
+    overflow: hidden;
+}
+
+/* Styles to move navbar items with "left" class to the left */
+li.navitem.left{
+    float: left
+}
+
+/* Styles to move navbar items with "right" class to the right */
+li.navitem.right{
+    float: right;
+}
+
+/* Styles for a tag items in navigation bar */
+li.navitem a {
+    /* Displays the element as a block */
+    display: block;
+    /* Sets the color of a text to white */
+    color: white;
+    /* Sets the font size of the text inside the navbar to larger */
+    font-size: larger;
+    /* Sets the padding inside the a elements in the navbar to 40px */
+    padding: 40px;
+    /* Removes the underlines on links in the navbar */
+    text-decoration: none;
+}
+
+/* Styles for a tag with id "img_anchor" */
+#img_anchor {
+    /* Sets the padding inside this element to zero */
+    padding: 0;
+    /* Sets the margin around this element to zero */
+    margin: 0;
+}
+
+/* Styles for when the a tag with id "img_anchor" is hovered over*/
+#img_anchor:hover {
+    background-color: #55565A;
+}
+
+/* Styles for logo image element in the navbar */
+li.navitem img {
+    /* Displays the element as a block in the navbar */
+    display: block;
+    /* Sets the left padding inside the image element to 15px */
+    padding-left: 15px;
+    /* Sets the height of the image element to 100px */
+    height: 100px;
+    /* Sets the width of the image element to 100px */
+    width: 100px;
+}
+
+/* Styles for when a navbar link element is hovered over */
+li.navitem a:hover {
+    /* Sets the background color to CSUN red */
+    background-color: #D22030;
+}
+
+/* Styles for the Sign up and Login containers */
+#container {
+    /* Sets the margin around the container div to 100px top and bottom and 500px left and right */
+    margin: 100px 500px;
+    /* Sets the padding inside the container div to 50px all around */
+    padding: 50px;
+    /* Sets the height of the container div to 500px */
+    height: 500px;
+    /* Sets the background color to a cream color */
+    background-color: #D8D2C4;
+    /* Rounds the corners of the container div element */
+    border-radius: 50px;
+    /* Aligns the text in the container div to the center */
+    text-align: center;
+}
+
+/* Styles for the input elements in the container div */
+#container input {
+    /* Sets the font to Poppins or sans-serif if Poppins not available */
+    font-family: Poppins, sans-serif;
+    /* Sets the font size of the text inside inputs to large */
+    font-size: large;
+    /* Aligns the text inside inputs to the center */
+    text-align: center;
+    /* Sets the height of the input box to 50px */
+    height: 50px;
+    /* Sets the width of the input box to 400px */
+    width: 400px;
+}
+
+/* Styles for the input container div */
+.input_container {
+    /* Sets the elements position relative to its normal position */
+    position: relative;
+}
+
+/* Styles for the input elements in the input container div */
+.input_container input {
+    /* Displays the element as an inline block */
+    display: inline-block;
+}
+
+/* Styles for the image elements in the input container div */
+.input_container img {
+    /* Sets the elements position as absolute and positions it to the nearest ancestor */
+    position: absolute;
+    /* Displays the element as an inline block */
+    display: inline-block;
+    /* Sets the width of the image to 50px */
+    width: 50px;
+    /* Sets the height of the image to 50px */
+    height: 50px;
+    /* Sets the padding top inside the image element to 3px */
+    padding-top: 3px;
+    /* Sets the padding left inside the image element to 2px */
+    padding-left: 2px;
+}
+
+/* Styles for the login input element */
+#login {
+    /* Sets the text color to white */
+    color: #FFFFFF;
+    /* Sets the background color to CSUN red */
+    background-color: #D22030;
+    /* Rounds the corners of the login input element */
+    border-radius: 50px;
+}
+
+/* Styles for the register input element */
+#register {
+    /* Sets the text color to white */
+    color: #FFFFFF;
+    /* Sets the background color to CSUN red */
+    background-color: #D22030;
+    /* Rounds the corners of the register input element */
+    border-radius: 50px;
+}
+
+/* Styles for the intro_container div */
+#intro_container{
+    /* Sets the elements position relative to its normal position */
+    position: relative;
+    /* Sets the height of the div container to 800px */
+    height: 800px;
+    /* Sets the width to width of screen */
+    width: auto;
+    /* Sets the background color to a cream color */
+    background-color: #D8D2C4;
+    /* Cuts the elements so that the content fits inside the parent element */
+    overflow: hidden;
+}
+
+/* Styles for h1 tag inside the intro_container div */
+#intro_container h1{
+    /* Sets the text font size to xxx-large */
+    font-size: xxx-large;
+    /* Sets the elements position as absolute and positions it to the nearest ancestor */
+    position: absolute;
+    /* Moves element down from the top 200px */
+    top: 200px;
+    /* Moves element left 200px */
+    left: 200px;
+}
+
+/* Styles for p tags inside the intro-container div */
+#intro_container p {
+    /* Sets the elements position as absolute and positions it to the nearest ancestor */
+    position: absolute;
+    /* Moves element down from the top 375px */
+    top: 375px;
+    /* Moves element left 200px */
+    left: 200px;
+}
+
+/* Styles for button element in intro_container div */
+#intro_container a {
+    /* Sets the background color to CSUN red */
+    background-color: #D22030;
+    /* Rounds the corners of the register input element */
+    border-radius: 25px;
+    /* Sets border of button to solid black with size 5px */
+    border: solid #000000 5px;
+    /* Sets the height of the element to 75px */
+    height: 75px;
+    /* Sets the height of the element to 250px */
+    width: 250px;
+    /* Sets the elements position as absolute and positions it to the nearest ancestor */
+    position: absolute;
+    /* Moves element down from the top 500px */
+    top: 500px;
+    /* Moves element left 200px */
+    left: 200px;
+    /* Removes the underlines on links in the navbar */
+    text-decoration: none;
+    /* Sets the text color to white */
+    color: #FFFFFF;
+    /* Sets the text font size to xx-large */
+    font-size: xx-large;
+    /* Aligns text to center of element */
+    text-align: center;
+    /* Sets padding inside element to 15px */
+    padding-top: 15px;
+}
+
+
+
+/* Styles for image element in intro_container div */
+#intro_container img {
+    /* Sets the elements position as absolute and positions it to the nearest ancestor */
+    position: absolute;
+    /* Moves element left 800px */
+    left: 800px;
+    /* Moves element down from the top 25px */
+    top: 25px;
+}
+
+/* Styles for about_container div */
+#about_container {
+    /* Sets the height of the element to 800px */
+    height: 800px;
+    /* Sets the width to width of screen */
+    width: auto;
+    /* Sets the background color to Dark Turquoise */
+    background-color: darkturquoise;
+}
+
+/* Styles for h1 element in about_container div */
+#about_container h1{
+    /* Sets the elements position as absolute and positions it to the nearest ancestor */
+    position: absolute;
+    /* Sets the text font size to xxx-large */
+    font-size: xxx-large;
+    /* Moves element down from the top 1150px */
+    top: 1150px;
+    /* Moves element left 1000px */
+    left: 1000px;
+}
+
+/* Styles for p element in about_container div */
+#about_container p {
+    /* Sets the elements position as absolute and positions it to the nearest ancestor */
+    position: absolute;
+    /* Moves element down from the top 1325px */
+    top: 1325px;
+    /* Moves element left 1000px */
+    left: 1000px;
+}
+
+/* Styles for games_container div */
+#games_container {
+    /* Sets the height of the element to 800px */
+    height: 800px;
+    /* Sets the width to width of screen */
+    width: auto;
+    /* Sets the background color to Dark Turquoise */
+    background-color: lightgreen;
+}
+
+/* Styles for h1 element in games_container div */
+#games_container h1{
+    /* Sets the elements position as absolute and positions it to the nearest ancestor */
+    position: absolute;
+    /* Sets the text font size to xxx-large */
+    font-size: xxx-large;
+    /* Moves element down from the top 1150px */
+    top: 1950px;
+    /* Moves element left 1000px */
+    left: 200px;
+}
+
+/* Styles for p element in games_container div */
+#games_container p {
+    /* Sets the elements position as absolute and positions it to the nearest ancestor */
+    position: absolute;
+    /* Moves element down from the top 1325px */
+    top: 2125px;
+    /* Moves element left 1000px */
+    left: 200px;
+}
+
+/* Styles for footer div */
+#footer {
+    /* Aligns the text in this div to the center */
+    text-align: center;
+    /* Sets the height of the element to 800px */
+    height: 300px;
+    /* Sets the width to width of screen */
+    width: auto;
+}
+
+/* Styles for p element in footer div */
+#footer h1 {
+    position: relative;
+    top: 20px;
+}
+
+/* Styles for a element in footer div */
+#footer a {
+    /* Sets the background color to CSUN red */
+    background-color: #D22030;
+    /* Rounds the corners of the register input element */
+    border-radius: 25px;
+    /* Sets border of button to solid black with size 5px */
+    border: solid #000000 5px;
+    /* Sets the height of the element to 75px */
+    height: 75px;
+    /* Sets the height of the element to 250px */
+    width: 250px;
+    /* Sets the elements position as absolute and positions it to the nearest ancestor */
+    position: absolute;
+    /* Moves element down from the top 500px */
+    top: 2650px;
+    /* Moves element left 200px */
+    left: 750px;
+    /* Removes the underlines on links in the navbar */
+    text-decoration: none;
+    /* Sets the text color to white */
+    color: #FFFFFF;
+    /* Sets the text font size to xx-large */
+    font-size: xx-large;
+    /* Aligns text to center of element */
+    text-align: center;
+    /* Sets padding inside element to 15px */
+    padding-top: 15px;
+}
+
+/* Styles for p element in footer div */
+#footer p {
+    position: absolute;
+    top: 2800px;
+    left: 675px;
+}
