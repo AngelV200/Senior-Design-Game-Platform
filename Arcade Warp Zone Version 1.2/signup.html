@@ -93,6 +93,7 @@
             if (password.value !== confirmPassword.value) {
                 confirmPassword.setCustomValidity("Passwords do not match!");
                 confirmPassword.reportValidity();
+                return;
             }
 
             const formData = new FormData(this);
