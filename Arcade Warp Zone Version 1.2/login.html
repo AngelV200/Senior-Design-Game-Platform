@@ -27,7 +27,7 @@
 
       <!-- Div tag with the id "container" used to contain the form elements for user login -->
       <div id="container">
-          <form>
+          <form action="login.php" method="POST">
               <h1>Login</h1><br>
               <!-- Div tag containing the username input of the form -->
               <div class="input_container">
@@ -48,30 +48,61 @@
               <input id="login" type="submit" value="Login">
               <!-- P tag that contains link to sign up page if user already has accounts -->
               <p>Don't have an account? Register <a href="signup.html">here</a></p>
+              <p id="login_message"></p>
           </form>
       </div>
       <!-- Script tag containing JavaScript the page will use -->
       <script>
           // variable for the input element of the form containing the password entered
-          let password_input = document.getElementById("password");
+          let password = document.getElementById("password");
           // variable for password show eye image
           let show_image = document.getElementById("password_show");
           // variable for password hide eye with cross image
           let hide_image = document.getElementById("password_hide");
+          // variable for login form element
+          const form = document.querySelector("form");
 
           // This function toggles between revealing and hiding the password depending on the eye
           // image selected by the user
           function togglePass(){
-              if(password_input.type === "password"){
-                  password_input.type = "text";
+              if(password.type === "password"){
+                  password.type = "text";
                   show_image.style.display = "none";
                   hide_image.style.display = "inline";
               } else {
-                  password_input.type = "password";
+                  password.type = "password";
                   show_image.style.display = "inline";
                   hide_image.style.display = "none";
               }
           }
+
+          form.addEventListener("submit", function (event) {
+              event.preventDefault();
+              const formData = new FormData(this);
+
+              // Send a POST request to the PHP script
+              fetch('login.php', {
+                  method: 'POST',
+                  body: formData
+              })
+                  .then(response => response.json())
+                  .then(data => {
+                      if (data.status === 'success') {
+                          // Redirect to main.html upon successful login
+                          window.location.href = 'game.html';
+                      }
+                      if (data.status === 'error') {
+                          // Error message
+                          document.getElementById('login_message').innerText = data.message;
+                          // Clear the form or do other actions upon success
+                          this.reset();
+                      }
+                  })
+                  .catch(error => {
+                      console.error('Error:', error);
+                  });
+              }
+          )
       </script>
   </body>
 </html>
