@@ -351,17 +351,17 @@ li.navitem a:hover {
 /* Styles for a element in footer div */
 #footer a {
     /* Sets the background color to CSUN red */
-    background-color: #D22030;
+    /*background-color: #D22030; */
     /* Rounds the corners of the register input element */
-    border-radius: 25px;
+    /*border-radius: 25px; */
     /* Sets border of button to solid black with size 5px */
-    border: solid #000000 5px;
+    /*border: solid #000000 5px; */
     /* Sets the height of the element to 75px */
     height: 75px;
     /* Sets the height of the element to 250px */
     width: 250px;
     /* Sets the elements position as absolute and positions it to the nearest ancestor */
-    position: absolute;
+    position: static;
     /* Moves element down from the top 500px */
     top: 2650px;
     /* Moves element left 200px */
@@ -369,24 +369,35 @@ li.navitem a:hover {
     /* Removes the underlines on links in the navbar */
     text-decoration: none;
     /* Sets the text color to white */
-    color: #FFFFFF;
+    /*color: #FFFFFF;*/
     /* Sets the text font size to xx-large */
-    font-size: xx-large;
+    font-size: 22px;
     /* Aligns text to center of element */
     text-align: center;
     /* Sets padding inside element to 15px */
     padding-top: 15px;
+
+    /*using the padding left to seperate the socail media links a bit aport and changing it's color */
+    padding-left: 10px;
+    color: rgb(26, 26, 136);
 }
 
 /* Styles for p element in footer div */
 #footer p {
-    position: absolute;
-    top: 2800px;
+    position: static;
+    /* top: 2800px; */
     left: 675px;
+    padding-top: 15px;
 }
 
-.footy{
+/*.footy{
     text-align: center;
-    /* padding-top: 2px; */
-    /* margin: 2px; */
+     padding-top: 2px;
+    margin: 2px;
+}*/
+
+/* using the hover puesdo class so when user puts mouse over the link it changes color */
+#footer a:hover{
+    color: red;
+    cursor: pointer;
 }
