@@ -1,0 +1,401 @@
+/* Set box-sizing property for all elements */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Set box-sizing and reset margin, padding, and border for the HTML element */
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Define custom fonts using @font-face for different sections */
+@font-face {
+    font-family: Headings;
+    src: url("fonts/BarcadeNoBarBold.otf");
+}
+
+@font-face {
+    font-family: Paragraphs;
+    src: url("fonts/PoppinsBold.ttf");
+}
+
+@font-face {
+    font-family: main;
+    src: url("fonts/BarcadeNoBar.otf");
+}
+
+/* Define keyframes for cursor animation */
+@keyframes cursorAnimation {
+    0% {
+        cursor: url('images/cursor/mario1.png'), auto;
+    }
+    12.5% {
+        cursor: url('images/cursor/mario2.png'), auto;
+    }
+    25% {
+        cursor: url('images/cursor/mario3.png'), auto;
+    }
+    37.5% {
+        cursor: url('images/cursor/mario4.png'), auto;
+    }
+    50% {
+        cursor: url('images/cursor/mario5.png'), auto;
+    }
+    62.5% {
+        cursor: url('images/cursor/mario6.png'), auto;
+    }
+    75% {
+        cursor: url('images/cursor/mario7.png'), auto;
+    }
+    87.5% {
+        cursor: url('images/cursor/mario8.png'), auto;
+    }
+    100% {
+        cursor: url('images/cursor/mario1.png'), auto;
+    }
+}
+
+/* Set styles for the body, including font-family, default cursor, and removal of margin, padding, and border */
+body {
+    font-family: main, sans-serif;
+    cursor: url("images/cursor/mario1.png"), auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Apply cursor animation on body hover */
+body:hover {
+    animation: cursorAnimation 0.5s steps(8) infinite;
+}
+
+
+/* Styles for the background container */
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Set styles for background video within the container */
+#background-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* Styles for the header, including display, positioning, and styling */
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+    height: 10rem;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Styles for the logo, including flex properties, dimensions, and styling */
+.logo img {
+    flex: 1;
+    height: 9rem;
+    width: 6rem;
+}
+
+/* Styles for the navbar, including display, gap, and link styling */
+.navbar {
+    display: flex;
+    gap: 1vw;
+}
+
+/* Styles for links in navbar */
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Styles for navbar links on hover */
+.navbar a:hover {
+    background-color: rgba(0, 222, 255, 0.5);
+}
+
+/* Styles for logo image on hover */
+.logo img:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+/* Styles for the intro container, including dimensions, positioning, and text styling */
+#intro_container {
+    height: 100%;
+    width: 100%;
+}
+
+/* Styles for video within the intro container */
+#intro_container video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* Styles for heading within the intro container */
+#intro_container h1{
+    position: relative;
+    top: 30vh;
+    padding-left: 10vw;
+    font-size: 5rem;
+    color: rgb(68, 0, 255);
+    font-family: Headings, sans-serif;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: rgb(0, 222, 255);
+    z-index: 2;
+}
+
+/* Styles for paragraph within the intro container */
+#intro_container p{
+    position: relative;
+    top: 25vh;
+    padding-left: 10vw;
+    font-size: 2rem;
+    color: rgb(68, 0, 255);
+    font-family: Headings, sans-serif;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: rgb(0, 222, 255);
+    z-index: 2;
+}
+
+/* Styles for link within the intro container */
+#intro_container a {
+    position: relative;
+    height: 5rem;
+    width: 10rem;
+    top: 28vh;
+    left: 10vw;
+    background-color: rgba(0, 222, 255, 0.7);
+    color: rgb(68, 0, 255);
+    border-radius: 1rem;
+    border: solid rgb(68, 0, 255) 0.25rem;
+    padding: 2vh;
+    text-decoration: none;
+    font-size: 3rem;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Styles for image within the intro container */
+#intro_container img {
+    position: absolute;
+    height: 50rem;
+    width: 50rem;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+/* Styles for the about container, including dimensions, positioning, and text styling */
+#about_container {
+    position: relative;
+    top: 24rem;
+    height: 100%;
+    width: 100%;
+}
+
+/* Styles for video within the about container */
+#about_container video {
+    position: absolute;
+    height: 35rem;
+    width: 35rem;
+    top: 25vh;
+    left: 10vw;
+    z-index: -1;
+
+}
+
+/* Styles for heading within the about container */
+#about_container h1{
+    position: relative;
+    top: 20rem;
+    padding-left: 50vw;
+    font-size: 5rem;
+    color: yellow;
+    font-family: Headings, sans-serif;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: black;
+}
+
+/* Styles for paragraph within the about container */
+#about_container p{
+    position: relative;
+    top: 18rem;
+    padding-left: 50vw;
+    font-size: 2rem;
+    color: white;
+    font-family: Headings, sans-serif;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: black;
+}
+
+/* Styles for the games container, including dimensions, positioning, and text styling */
+#games_container {
+    position: relative;
+    top: 40rem;
+    height: 100%;
+    width: 100%;
+}
+
+/* Styles for video within the games container */
+#games_container video {
+    position: absolute;
+    height: 35rem;
+    width: 35rem;
+    top: 25vh;
+    right: 10vw;
+    z-index: -1;
+
+}
+
+/* Styles for heading within the games container */
+#games_container h1{
+    position: relative;
+    top: 30vh;
+    padding-left: 10vw;
+    font-size: 5rem;
+    color: lawngreen;
+    font-family: Headings, sans-serif;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: black;
+}
+
+/* Styles for paragraph within the games container */
+#games_container p{
+    position: relative;
+    top: 25vh;
+    padding-left: 10vw;
+    font-size: 2rem;
+    color: white;
+    font-family: Headings, sans-serif;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: black;
+}
+
+/* Styles for the footer, including dimensions, positioning, and text styling */
+#footer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: white;
+    top: 100vh;
+    text-align: center;
+}
+
+/* Styles for heading within the footer */
+#footer h2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    -webkit-text-stroke-width: 0.025rem;
+    -webkit-text-stroke-color: black;
+}
+
+/* Styles for links within the footer */
+#footer a {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    border: solid white 0.25rem;
+    height: 5rem;
+    width: 5rem;
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+/* Styles for paragraphs within the footer */
+#footer p {
+    font-family: Paragraphs, sans-serif;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+/* Styles for the Sign up and Login containers */
+#container {
+    position: relative;
+    top: 10rem;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 5rem;
+    width: 50rem;
+    background-color: rgba(0, 222, 255, 0.8);
+    border-radius: 5rem;
+    text-align: center;
+}
+
+/* Styles for input elements within the container */
+#container input {
+    font-family: Paragraphs, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    height: 4rem;
+    width: 30rem;
+}
+
+/* Styles for paragraphs within the container */
+#container p {
+    margin-top: 3rem;
+    font-family: Paragraphs, sans-serif;
+}
+
+/* Styles for input elements within the container */
+.input_container {
+    position: relative;
+}
+
+/* Styles for the input elements in the input container div */
+.input_container input {
+    display: inline-block;
+    background-color: black;
+    color: white;
+}
+
+/* Styles for the image elements in the input container */
+.input_container img {
+    position: absolute;
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+}
+
+/* Styles for the login input button element */
+#login {
+    color: #FFFFFF;
+    background-color: rgb(68, 0, 255);
+    border-radius: 1rem;
+}
+
+/* Styles for the register input button element */
+#register {
+    color: #FFFFFF;
+    background-color: rgb(68, 0, 255);
+    border-radius: 1rem;
+}
