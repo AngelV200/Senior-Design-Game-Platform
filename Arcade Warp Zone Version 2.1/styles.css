@@ -89,6 +89,9 @@ body:hover {
     width: 100%;
     height: 100%;
     object-fit: fill;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* Styles for the header, including display, positioning, and styling */
@@ -398,4 +401,81 @@ body:hover {
     color: #FFFFFF;
     background-color: rgb(68, 0, 255);
     border-radius: 1rem;
+}
+
+.game-selection{
+    padding-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.game {
+    box-sizing: border-box;
+    width: 40%;
+    min-width: 350px;
+    padding: 1rem;
+    margin: 5rem 0;
+    color: white;
+    background-color: dodgerblue;
+    border: 1rem solid white;
+    text-align: center;
+}
+
+.game img {
+    width: 250px;
+    height: 250px;
+}
+
+#dashboard_container {
+    position: relative;
+    top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem;
+    width: 50rem;
+    height: 45rem;
+    background-color: rgba(0, 222, 255, 0.8);
+    border-radius: 5rem;
+    text-align: center;
+    color: black;
+}
+
+#dashboard_container img {
+    border-radius: 1rem;
+}
+
+.menu_content {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 30rem;
+}
+
+.selection_menu {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 10rem;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 5rem;
+}
+
+.profile_option {
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+}
+
+#changePictureBtn {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: white;
+    background-color: black;
 }

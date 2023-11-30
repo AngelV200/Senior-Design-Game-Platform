@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if ($stmt->fetch() && password_verify($passwordInput, $hashed_password)) {
+        $_SESSION['username'] = $usernameInput;
         $response['message'] = "Login Successful!";
         $response['status'] = "success";
     } else {
