@@ -37,8 +37,8 @@ exit();
     <div class="game-selection">
         <!-- Game 1 -->
         <div class="game">
-            <h1>Game Title</h1>
-            <a href="#top"><img src="images/game_image.png" alt="game_image"></a>
+            <h1>Snake Apple Eater</h1>
+            <a href="Games/snake.html"><img src="images/Snake Icon.png" alt="game_image"></a>
         </div>
 
         <!-- Game 2 -->
