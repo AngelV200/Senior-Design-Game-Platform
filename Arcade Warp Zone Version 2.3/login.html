@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- This meta tag specifies the character encoding for the document. UTF-8 is widely used for handling various character sets. -->
+        <meta charset="UTF-8">
+        <!--The title tag is what text will be shown on user's browser tab -->
+        <title>Arcade Warp Zone</title>
+        <!--This link tag inserts a "favicon" or small icon logo next to the browser's tab title -->
+        <link rel="icon" type="image/x-icon" href="/images/logo.ico">
+        <!--This link tag gets the CSS styles from the gamestyles.css file -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body>
+    <!-- Div container for starry background video -->
+    <div id="background-container">
+        <video id="stars-video" autoplay muted loop playsinline>
+            <source src="videos/stars.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Navigational Bar -->
+    <div class=header>
+        <div class="logo">
+            <a id="logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="index.html#games_container">Games</a>
+            <a href="index.html#about_container">About</a>
+        </div>
+    </div>
+
+      <!-- Div tag with the id "container" used to contain the form elements for user login -->
+      <div id="container">
+          <form action="login.php" method="POST">
+              <h1>Login</h1><br>
+              <!-- Div tag containing the username input of the form -->
+              <div class="input_container">
+                  <label for="username"></label>
+                  <img src="images/person.png" alt="person_icon">
+                  <input type="text" id="username" name="username" placeholder="Username" required><br><br>
+              </div>
+              <!-- Div tag containing the password input of the form -->
+              <div class="input_container">
+                  <label for="password"></label>
+                  <img src="images/lock.png" alt="lock_icon">
+                  <input type="password" id="password" name="password" placeholder="Password" required>
+                  <img id="password_show" onclick="togglePass()" src="images/eye.png" alt="password_show">
+                  <img id="password_hide" onclick="togglePass()" src="images/eye-off.png" alt="password_hide" style="display: none"><br><br>
+              </div>
+              <!-- Login input that acts as a button to log the user in -->
+              <!-- We'll use these credentials to authenticate user for access to the website -->
+              <input id="login" type="submit" value="Login">
+              <!-- P tag that contains link to sign up page if user already has accounts -->
+              <p>Don't have an account? Register <a href="signup.html">here</a></p>
+              <p id="login_message"></p>
+          </form>
+      </div>
+      <!-- Script tag containing JavaScript the page will use -->
+      <script>
+          // variable for the input element of the form containing the password entered
+          let password = document.getElementById("password");
+          // variable for password show eye images
+          let show_image = document.getElementById("password_show");
+          // variable for password hide eye with cross images
+          let hide_image = document.getElementById("password_hide");
+          // variable for login form element
+          const form = document.querySelector("form");
+
+          // This function toggles between revealing and hiding the password depending on the eye
+          // images selected by the user
+          function togglePass(){
+              if(password.type === "password"){
+                  password.type = "text";
+                  show_image.style.display = "none";
+                  hide_image.style.display = "inline";
+              } else {
+                  password.type = "password";
+                  show_image.style.display = "inline";
+                  hide_image.style.display = "none";
+              }
+          }
+
+          form.addEventListener("submit", function (event) {
+              event.preventDefault();
+              const formData = new FormData(this);
+
+              // Send a POST request to the PHP script
+              fetch('login.php', {
+                  method: 'POST',
+                  body: formData
+              })
+                  .then(response => response.json())
+                  .then(data => {
+                      if (data.status === 'success') {
+                          // Redirect to main.html upon successful login
+                          window.location.href = 'dashboard.php';
+                      }
+                      if (data.status === 'error') {
+                          // Error message
+                          document.getElementById('login_message').innerText = data.message;
+                          // Clear the form or do other actions upon success
+                          this.reset();
+                      }
+                  })
+                  .catch(error => {
+                      console.error('Error:', error);
+                  });
+              }
+          )
+      </script>
+  </body>
+</html>
