@@ -68,7 +68,7 @@ exit();
         <!-- Game 6 -->
         <div class="game">
             <h1>Brick</h1>
-            <a href="games/brick/brick.php"><img src="images/game_image.png" alt="game_image"></a>
+            <a href="./games/brick/brick.php"><img src="images/game_image.png" alt="game_image"></a>
         </div>
 
         <!-- Game 7 -->
